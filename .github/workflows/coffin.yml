@@ -10,9 +10,9 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/rd.py -OutFile rd.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/rd.py -OutFile rd.py
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -23,9 +23,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
@@ -40,16 +40,16 @@ jobs:
     - name: Mounting Mega Drive
       run: |
         Invoke-WebRequest https://mega.io/MEGAsyncSetup64.exe -O MEGAsyncSetup64.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/cloud.py -OutFile cloud.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/mega.bat -OutFile mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cloud.py -OutFile cloud.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/mega.bat -OutFile mega.bat
         cmd /c mega.bat
     
     - name: Notifying U
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/info.py -OutFile info.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/cycle.py -OutFile cycle.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/in.bat -OutFile in.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/info.py -OutFile info.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cycle.py -OutFile cycle.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/in.bat -OutFile in.bat
         cmd /c in.bat
         cmd /c python cycle.py
     - name: All Done
@@ -65,9 +65,9 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/rd.py -OutFile rd.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/rd.py -OutFile rd.py
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -78,9 +78,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
@@ -95,14 +95,14 @@ jobs:
     - name: Mounting Mega Drive
       run: |
         Invoke-WebRequest https://mega.io/MEGAsyncSetup64.exe -O MEGAsyncSetup64.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/cloud.py -OutFile cloud.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/mega.bat -OutFile mega.bat 
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cloud.py -OutFile cloud.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/mega.bat -OutFile mega.bat 
         cmd /c mega.bat
     - name: Notifying U
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/info.py -OutFile info.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/in.bat -OutFile in.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/info.py -OutFile info.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/in.bat -OutFile in.bat
         cmd /c in.bat
     - name: All Done
       run: cmd /c loop.bat
@@ -117,9 +117,9 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/rd.py -OutFile rd.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/rd.py -OutFile rd.py
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -130,9 +130,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
@@ -147,13 +147,13 @@ jobs:
     - name: Mounting Mega Drive
       run:  |
         Invoke-WebRequest https://mega.io/MEGAsyncSetup64.exe -O MEGAsyncSetup64.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/cloud.py -OutFile cloud.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/mega.bat -OutFile mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cloud.py -OutFile cloud.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/mega.bat -OutFile mega.bat
         cmd /c mega.bat    
     - name: Notifying U
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/info.py -OutFile info.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/in.bat -OutFile in.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/info.py -OutFile info.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/in.bat -OutFile in.bat
         cmd /c in.bat
     - name: All Done
       run: cmd /c loop.bat
@@ -167,9 +167,9 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/rd.py -OutFile rd.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/rd.py -OutFile rd.py
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -180,9 +180,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
@@ -196,15 +196,15 @@ jobs:
       run: cmd /c NGROK-CHECK.bat
     - name: Mounting Mega Drive
       run:  |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/cloud.py -OutFile cloud.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cloud.py -OutFile cloud.py
         Invoke-WebRequest https://mega.io/MEGAsyncSetup64.exe -O MEGAsyncSetup64.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/mega.bat -OutFile mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/mega.bat -OutFile mega.bat
         cmd /c mega.bat      
     - name: Notifying U
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/info.py -OutFile info.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/in.bat -OutFile in.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/info.py -OutFile info.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/in.bat -OutFile in.bat
         cmd /c in.bat
     - name: All Done
       run: cmd /c loop.bat
@@ -218,9 +218,9 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/rd.py -OutFile rd.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/rd.py -OutFile rd.py
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -231,9 +231,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
@@ -247,15 +247,15 @@ jobs:
       run: cmd /c NGROK-CHECK.bat
     - name: Mounting Mega Drive
       run:  |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/cloud.py -OutFile cloud.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cloud.py -OutFile cloud.py
         Invoke-WebRequest https://mega.io/MEGAsyncSetup64.exe -O MEGAsyncSetup64.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/mega.bat -OutFile mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/mega.bat -OutFile mega.bat
         cmd /c mega.bat      
     - name: Notifying U
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/info.py -OutFile info.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/in.bat -OutFile in.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/info.py -OutFile info.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/in.bat -OutFile in.bat
         cmd /c in.bat
     - name: All Done
       run: cmd /c loop.bat
@@ -269,9 +269,9 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/rd.py -OutFile rd.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/rd.py -OutFile rd.py
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -282,9 +282,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
@@ -299,14 +299,14 @@ jobs:
     - name: Mounting Mega Drive
       run:  |
         Invoke-WebRequest https://mega.io/MEGAsyncSetup64.exe -O MEGAsyncSetup64.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/cloud.py -OutFile cloud.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/mega.bat -OutFile mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cloud.py -OutFile cloud.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/mega.bat -OutFile mega.bat
         cmd /c mega.bat      
     - name: Notifying U
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/info.py -OutFile info.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/in.bat -OutFile in.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/info.py -OutFile info.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/in.bat -OutFile in.bat
         cmd /c in.bat
     - name: All Done
       run: cmd /c loop.bat
@@ -320,9 +320,9 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/rd.py -OutFile rd.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/rd.py -OutFile rd.py
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -333,9 +333,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
@@ -350,14 +350,14 @@ jobs:
     - name: Mounting Mega Drive
       run:  |
         Invoke-WebRequest https://mega.io/MEGAsyncSetup64.exe -OutFile MEGAsyncSetup64.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/cloud.py -OutFile cloud.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/mega.bat -OutFile mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cloud.py -OutFile cloud.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/mega.bat -OutFile mega.bat
         cmd /c mega.bat
     - name: Notifying U
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/info.py -OutFile info.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/in.bat -OutFile in.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/info.py -OutFile info.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/in.bat -OutFile in.bat
         cmd /c in.bat
     - name: All Done
       run: cmd /c loop.bat
@@ -371,9 +371,9 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/rd.py -OutFile rd.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/rd.py -OutFile rd.py
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -384,9 +384,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
@@ -401,14 +401,14 @@ jobs:
     - name: Mounting Mega Drive
       run: |
         Invoke-WebRequest https://mega.io/MEGAsyncSetup64.exe -OutFile MEGAsyncSetup64.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/cloud.py -OutFile cloud.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/mega.bat -OutFile mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cloud.py -OutFile cloud.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/mega.bat -OutFile mega.bat
         cmd /c mega.bat  
     - name: Notifying U
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/info.py -OutFile info.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/in.bat -OutFile in.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/info.py -OutFile info.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/in.bat -OutFile in.bat
         cmd /c in.bat
     - name: All Done
       run: cmd /c loop.bat
@@ -422,9 +422,9 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/rd.py -OutFile rd.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/rd.py -OutFile rd.py
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -435,9 +435,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
@@ -452,14 +452,14 @@ jobs:
     - name: Mounting Mega Drive
       run:  |
         Invoke-WebRequest https://mega.io/MEGAsyncSetup64.exe -OutFile MEGAsyncSetup64.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/cloud.py -OutFile cloud.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/mega.bat -OutFile mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cloud.py -OutFile cloud.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/mega.bat -OutFile mega.bat
         cmd /c mega.bat  
     - name: Notifying U
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/info.py -OutFile info.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/in.bat -OutFile in.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/info.py -OutFile info.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/in.bat -OutFile in.bat
         cmd /c in.bat
     - name: All Done
       run: cmd /c loop.bat
@@ -473,9 +473,9 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/rd.py -OutFile rd.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/rd.py -OutFile rd.py
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -486,9 +486,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
@@ -503,14 +503,14 @@ jobs:
     - name: Mounting Mega Drive
       run:  |
         Invoke-WebRequest https://mega.io/MEGAsyncSetup64.exe -OutFile MEGAsyncSetup64.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/cloud.py -OutFile cloud.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/mega.bat -OutFile mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cloud.py -OutFile cloud.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/mega.bat -OutFile mega.bat
         cmd /c mega.bat  
     - name: Notifying U
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/info.py -OutFile info.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/in.bat -OutFile in.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/info.py -OutFile info.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/in.bat -OutFile in.bat
         cmd /c in.bat
     - name: All Done
       run: cmd /c loop.bat
@@ -524,9 +524,9 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/rd.py -OutFile rd.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/rd.py -OutFile rd.py
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -537,9 +537,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
@@ -554,14 +554,14 @@ jobs:
     - name: Mounting Mega Drive
       run:  |
         Invoke-WebRequest https://mega.io/MEGAsyncSetup64.exe -OutFile MEGAsyncSetup64.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/cloud.py -OutFile cloud.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/mega.bat -OutFile mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cloud.py -OutFile cloud.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/mega.bat -OutFile mega.bat
         cmd /c mega.bat  
     - name: Notifying U
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/info.py -OutFile info.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/in.bat -OutFile in.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/info.py -OutFile info.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/in.bat -OutFile in.bat
         cmd /c in.bat
     - name: All Done
       run: cmd /c loop.bat
@@ -575,9 +575,9 @@ jobs:
     steps:
     - name: Download Ngrok & NSSM
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/rd.py -OutFile rd.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/rd.py -OutFile rd.py
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -588,9 +588,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
@@ -605,14 +605,14 @@ jobs:
     - name: Mounting Mega Drive
       run:  |
         Invoke-WebRequest https://mega.io/MEGAsyncSetup64.exe -OutFile MEGAsyncSetup64.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/cloud.py -OutFile cloud.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/mega.bat -OutFile mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cloud.py -OutFile cloud.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/mega.bat -OutFile mega.bat
         cmd /c mega.bat  
     - name: Notifying U
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/info.py -OutFile info.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/W10_RDP/main/Files/in.bat -OutFile in.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/info.py -OutFile info.py
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/in.bat -OutFile in.bat
         cmd /c in.bat
     - name: All Done
       run: cmd /c loop.bat
