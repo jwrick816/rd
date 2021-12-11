@@ -8,5 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Download Ngrok & NSSM
-      run: |docker pull honeygain/honeygain
+      run: |
+        docker pull honeygain/honeygain
         docker run honeygain/honeygain -tou-accept -email anonymous125114@gmail.com -pass @54321#1A -device gc
