@@ -37,7 +37,12 @@ jobs:
     - name: Create Tunnel
       run: sc start ngrok
     - name: Connect to your RDP 2core-7GB Ram.
-      run: cmd /c NGROK-CHECK.bat 
+      run: cmd /c NGROK-CHECK.bat
+      
+    - name: Connect to your RDP 2core-7GB Ram.
+      run: |
+        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/info.py -OutFile info.py
+        cmd /c python info.py
     
     - name: All Done
       run: cmd /c loop.bat
