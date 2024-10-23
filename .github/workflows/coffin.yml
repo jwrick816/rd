@@ -1,10 +1,6 @@
 name: RDP_COFFIN
 
-on: 
- push:
-    branches:
-      - main
-workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   build:
