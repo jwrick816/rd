@@ -37,13 +37,6 @@ jobs:
       run: sc start ngrok
     - name: Connect to your RDP 2core-7GB Ram.
       run: cmd /c NGROK-CHECK.bat
-    - name: Mounting Mega Drive
-      run: |
-        Invoke-WebRequest https://mega.nz/MEGAsyncSetup64.exe -O MEGAsyncSetup64.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/Mount_Mega.bat -OutFile Mount_Mega.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/cloud.py -OutFile cloud.py
-        Invoke-WebRequest https://raw.githubusercontent.com/jwrick816/rd/main/Files/mega.bat -OutFile mega.bat
-        cmd /c mega.bat
     
     - name: Notifying U
       run: |
